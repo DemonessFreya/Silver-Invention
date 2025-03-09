@@ -13,7 +13,10 @@ set(SOURCES src/main.cpp)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 # Define directory for stb
-set(STB_INCLUDE_DIR C:/msys64/mingw64/include/stb)
+set(STB_INCLUDE_DIR ./include/core) # other loaction for stb: C:/msys64/mingw64/include/stb
+
+# Define directory for tiny object loader
+set(TINY_OBJ_INCLUDE_DIR ./include/core)
 
 # Define the executable
 add_executable(Vulkan ${SOURCES})
@@ -29,6 +32,7 @@ target_link_libraries(Vulkan PRIVATE ${Vulkan_LIBRARIES} glfw)
 target_include_directories(Vulkan PRIVATE ${Vulkan_INCLUDE_DIRS})
 target_include_directories(Vulkan PRIVATE ${GLFW_INCLUDE_DIRS})
 target_include_directories(Vulkan PRIVATE ${STB_INCLUDE_DIR})
+target_include_directories(Vulkan PRIVATE ${TINY_OBJ_INCLUDE_DIR})
 
 # Set default build type if not specified
 if (NOT CMAKE_BUILD_TYPE)
