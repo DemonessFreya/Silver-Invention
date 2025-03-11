@@ -12,3 +12,7 @@ _deps
 CMakeUserPresets.json
 .cmake/
 .vscode/
+.ninja_deps
+.ninja_log
+build.ninja
+.ninja_lock
