@@ -36,8 +36,3 @@ target_include_directories(Vulkan PRIVATE
     ${CMAKE_SOURCE_DIR}/include  # Add the root include directory
     ${CMAKE_SOURCE_DIR}/include/core/tinyobjectloader
 )
-
-# Set default build type if not specified
-if (NOT CMAKE_BUILD_TYPE)
-    set(CMAKE_BUILD_TYPE Release CACHE STRING "Choose the type of build." FORCE)
-endif()
